@@ -3,6 +3,7 @@ class String
     gsub!(/[aeiou]/, '')
     gsub!(/[^[:alpha:]]/, '')
     gsub!(/(.)\1+/, '\1')
+    downcase!
     self
   end
   

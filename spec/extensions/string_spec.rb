@@ -15,6 +15,10 @@ describe "String Extensions" do
       @str.crushinate.object_id.should_not == @str.object_id
     end
     
+    it "should remove capitalization" do
+      "XxX".crushinate.should == 'xxx'
+    end
+    
     it "should remove non word characters" do
       "blah blah?! (what 123)".crushinate.should == 'blhblhwht'
     end
