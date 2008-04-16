@@ -1,5 +1,6 @@
 require 'spec'
-require File.join(File.dirname(__FILE__), '..', 'crushinate')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'crushinator')
 
 Spec::Runner.configure do |config|
+  
 end

@@ -33,4 +33,20 @@ describe "Array Extensions" do
       proc { (@array << @array.first).crushinate }.should raise_error
     end
   end
+  
+  describe "crushinate_on" do
+    before(:each) do
+      @array = ['hello']
+    end
+    
+    it "should crushinate on the method's return value" do
+      @array.each do |string|
+        reversed_string = mock('reversed string')
+        reversed_string.should_receive(:crushinate).and_return('hl')
+        string.stub!(:reverse).and_return(reversed_string)
+      end
+      @array.crushinate_on(:reverse)
+    end
+  end
+  
 end
