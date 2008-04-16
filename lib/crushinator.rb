@@ -1,2 +1,2 @@
-require File.join('lib', 'extensions', 'string')
-require File.join('lib', 'extensions', 'array')
+require File.join(File.dirname(__FILE__), 'extensions', 'string')
+require File.join(File.dirname(__FILE__), 'extensions', 'array')
