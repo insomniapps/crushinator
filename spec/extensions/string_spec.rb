@@ -16,7 +16,7 @@ describe "String Extensions" do
     end
     
     it "should remove capitalization" do
-      "XxX".crushinate.should == 'xxx'
+      "XxX".crushinate.should == 'x'
     end
     
     it "should remove non word characters" do
@@ -33,6 +33,10 @@ describe "String Extensions" do
     
     it "should remove repeating letters after removing vowels" do
       "kokomo".crushinate.should == 'km'
+    end
+    
+    it "should do everything at once" do
+      "H h HEeELl123LOoO".crushinate.should == 'hl'
     end
   end
   

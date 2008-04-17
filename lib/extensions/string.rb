@@ -1,9 +1,9 @@
 class String
   def crushinate!
-    gsub!(/[aeiou]/, '')
     gsub!(/[^[:alpha:]]/, '')
-    gsub!(/(.)\1+/, '\1')
+    gsub!(/[aeiou]/i, '')
     downcase!
+    gsub!(/(.)\1+/, '\1')
     self
   end
   
