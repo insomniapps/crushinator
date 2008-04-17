@@ -1,0 +1,31 @@
+The Crushinator
+===============
+
+A simple method of matching an irregular string against a set of known values for a match.
+
+Examples
+=======
+
+  # pristine string
+  "hello world".crushinate      # => "hlwrld"
+  
+  # irregular string
+  "HELLLLO wurld ".crushinate   # => "hlwrld"
+
+  
+  # crushinate can be called on arrays to generate a map
+  
+  map = ["Elijah Miller", "Kris Chambers"].crushinate
+  # => {"ljhmlr"=>"Elijah Miller", "krschmbrs"=>"Kris Chambers"}
+  
+  map["eli jah MILLLLLLER".crushinate]
+  # => "Elijah Miller"
+  
+  
+  # An exception will be raised if the map has collisions
+  map = ["Elijah Miller", "eli jah miller"].crushinate
+  # => RuntimeError: Duplicate crushinated strings for Elijah Miller and eli jah miller
+
+
+Homepage: http://github.com/insomniapps/crushinator/tree/master  
+Copyright (c) 2008 Elijah Miller, released under the MIT license.
